@@ -1,0 +1,15 @@
+{
+  "name": "backend-crud",
+  "version": "1.0.0",
+  "description": "learning-express",
+  "license": "ISC",
+  "author": "fanda-alfaridzi",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
