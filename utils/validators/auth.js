@@ -4,8 +4,7 @@ const prisma = require('../../prisma/client')
 
 const validateRegister =[
     body('name').notEmpty().withMessage('Name is required'),
-    body('image').notEmpty().withMessage('Image is required')
-        .bail()
+    body('image')
         .custom((value,{req})=>{
             if(!req.file)
             {
@@ -28,8 +27,6 @@ const validateRegister =[
         })
         ,
     body('email')
-        .notEmpty().withMessage('Email is required')
-        .isEmail().withMessage('Email is required')
         .custom(async (value)=>{
             //Jika tidak memiliki value kembalikan/lemparkan Error
             if(!value){

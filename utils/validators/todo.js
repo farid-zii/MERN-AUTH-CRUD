@@ -8,4 +8,4 @@ const validateTodo =[
     body('userId').notEmpty().withMessage('User is required'),
 ];
 
-module.exports =  validateTodo 
+module.exports =  {validateTodo} 
